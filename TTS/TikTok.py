@@ -78,7 +78,7 @@ vocals: Final[tuple] = (
 
 class TikTok:
     """TikTok Text-to-Speech Wrapper"""
-    def __init__(self):
+    def __init__(self, message):
         if not settings.config['settings']['tts']['tiktok_sessionid']:
             raise TikTokTTSException(5)
         headers = {
